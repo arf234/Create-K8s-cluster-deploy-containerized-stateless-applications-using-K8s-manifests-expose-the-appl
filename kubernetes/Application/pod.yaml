@@ -4,21 +4,18 @@ metadata:
   name: application
 spec:
   containers:
-    - name: application-container
-      image: 
+    - name: webapp
+      image: 332973323638.dkr.ecr.us-east-1.amazonaws.com/application-ecr:latest
       env:
-        - name: DBPWD
-          valueFrom:
-            secretKeyRef:
-              name: mysql-root-password
-              key: MYSQL_ROOT_PASSWORD
-        - name: DBPORT
-          value: "3306"
-        - name: DBHOST
-          value: "database.database.svc.cluster.local"
-        - name: DBUSER
-          value: "root"
+      - name: APP_COLOR
+        value: "lime"
+      - name: DBPWD
+        value: arf12345
+      - name: DBUSER
+        value: root
+      - name: DBHOST
+        value: "mysql.database.svc.cluster.local"
+      - name: DBPORT
+        value: "3306"
       ports:
         - containerPort: 8080
-  imagePullSecrets:
-    - name: secret-registry
