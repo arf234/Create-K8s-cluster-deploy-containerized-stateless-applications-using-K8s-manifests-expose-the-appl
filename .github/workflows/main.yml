@@ -23,8 +23,8 @@ on:
     - ./**
     
 env:
-  APPLICATION_ECR_PREFIX:  webapp
-  DATABASE_ECR_PREFIX: mysql
+  APPLICATION_ECR_PREFIX: application
+  DATABASE_ECR_PREFIX: database
   ECR_REPOSITORY: ecr
   WORKING_DIR: ./
   AWS_REGION: us-east-1
