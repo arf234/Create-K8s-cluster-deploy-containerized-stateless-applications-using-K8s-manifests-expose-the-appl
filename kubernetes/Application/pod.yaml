@@ -14,7 +14,7 @@ spec:
       - name: DBUSER
         value: root
       - name: DBHOST
-        value: "mysql.database.svc.cluster.local"
+        value: "mysql.assign2-db.svc.cluster.local"
       - name: DBPORT
         value: "3306"
       ports:
