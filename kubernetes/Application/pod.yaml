@@ -4,7 +4,7 @@ metadata:
   name: application
 spec:
   containers:
-    - name: webapp
+    - name: webapp 
       image: 332973323638.dkr.ecr.us-east-1.amazonaws.com/application-ecr:latest
       env:
       - name: APP_COLOR
